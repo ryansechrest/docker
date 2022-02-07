@@ -61,3 +61,5 @@ What it does:
 ## 5. Visit application
 
 Go to http://127.0.0.1:8000/ to see Laravel application.
+
+Run `docker-compose down` to stop all containers.
