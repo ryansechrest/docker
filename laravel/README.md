@@ -39,10 +39,10 @@ Run in project root:
 docker-compose up -d --build nginx
 ```
 
+What it does:
+
 1. Downloads base images and builds custom images on top.
 2. Starts `nginx`, `mysql`, and `php` container in detached mode.
-
-Builds Docker images and starts `nginx`, `mysql`, and `php` container.
 
 ## 4. Configure database
 
