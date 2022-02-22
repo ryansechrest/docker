@@ -10,26 +10,26 @@ docker-compose run --rm composer create-project --prefer-dist laravel/laravel .
 
 What it does:
 
-1. Launches `composer` utility container.
-2. Runs `composer create-project` to download Laravel into `src` directory.
-3. Removes `composer` utility container upon completion.
+1. Builds and starts `composer` utility container.
+2. Runs `composer create-project` to download Laravel into `laravel` directory.
+3. Stops and removes `composer` utility container upon completion.
 
 ## 2. Configure MySQL settings
 
-Edit `.env` in `src` directory:
+Edit `.env` in `laravel` directory:
 
 ```dotenv
 DB_CONNECTION=mysql
 DB_HOST=mysql
 DB_PORT=3306
-DB_DATABASE=homestead
-DB_USERNAME=homestead
+DB_DATABASE=laravel
+DB_USERNAME=laravel
 DB_PASSWORD=secret
 ```
 
 What it does:
 
-1. Tells Laravel how to connect to `mysql` container.
+1. Configures Laravel to connect to `mysql` container.
 
 ## 3. Start containers
 
@@ -41,8 +41,8 @@ docker-compose up -d --build nginx
 
 What it does:
 
-1. Downloads base images and builds custom images on top.
-2. Starts `nginx`, `mysql`, and `php` container in detached mode.
+1. Builds and starts `nginx`, `php`, and `mysql` containers.
+2. Runs in detached mode and rebuilds `nginx` container on each start.
 
 ## 4. Configure database
 
@@ -54,9 +54,9 @@ docker-compose run --rm artisan migrate
 
 What it does:
 
-1. Launches `artisan` utility container.
-2. Runs `artisan migrate` to configure database.
-3. Removes `artisan` utility container upon completion.
+1. Builds and starts `artisan` utility container.
+2. Runs `artisan migrate` to set up database.
+3. Stops and removes `artisan` utility container upon completion.
 
 ## 5. Visit application
 
