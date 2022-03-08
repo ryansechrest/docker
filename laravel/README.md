@@ -64,7 +64,19 @@ What it does:
 
 1. Downloads dependencies as defined in `composer.json`
 
-## 5. Configure database
+## 5. Generate key
+
+Only needed for cloned projects. Run in project root:
+
+```
+docker-compose up --rm artisan key:generate
+```
+
+What it does:
+
+1. Generates `APP_KEY` value in `.env` file
+
+## 6. Configure database
 
 Run in project root:
 
@@ -78,7 +90,7 @@ What it does:
 2. Runs `artisan migrate` to set up database.
 3. Stops and removes `artisan` utility container upon completion.
 
-## 6. Visit application
+## 7. Visit application
 
 Go to http://127.0.0.1:8000/ to see Laravel application.
 
