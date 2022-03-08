@@ -101,6 +101,6 @@ What it does:
 
 Go to http://127.0.0.1:6800/ to see Laravel application.
 
-Connect to MySQL using 127:0.0.1:6801 with user `laravel` and password `secret`.
+Connect to MySQL using `127:0.0.1:6801` with user `laravel` and password `secret`.
 
 Run `docker-compose down` to stop all containers.
