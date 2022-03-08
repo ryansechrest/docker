@@ -27,6 +27,12 @@ git clone git@github.com:<username>/<repository>.git .
 
 ## 2. Configure MySQL settings
 
+If no `.env` exists in project root, copy example file:
+
+```
+cp .env.example .env
+```
+
 Edit `.env` in `laravel` directory:
 
 ```dotenv
