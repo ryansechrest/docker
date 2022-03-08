@@ -19,7 +19,7 @@ What it does:
 To start with existing project, clone repository into project root:
 
 ```
-git clone git@github.com:ryansechrest/docker.git .
+git clone git@github.com:<username>/<repository>.git .
 ```
 
 ## 2. Configure MySQL settings
@@ -54,7 +54,9 @@ What it does:
 
 ## 4. Install dependencies
 
-Only needed for cloned projects. Run in project root:
+> :warning: Only needed for cloned projects.
+
+Run in project root:
 
 ```
 docker-compose up --rm composer install
@@ -66,7 +68,9 @@ What it does:
 
 ## 5. Generate key
 
-Only needed for cloned projects. Run in project root:
+> :warning: Only needed for cloned projects.
+
+Run in project root:
 
 ```
 docker-compose up --rm artisan key:generate
