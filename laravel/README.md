@@ -52,7 +52,19 @@ What it does:
 1. Builds and starts `nginx`, `php`, and `mysql` containers.
 2. Runs in detached mode and rebuilds `nginx` container on each start.
 
-## 4. Configure database
+## 4. Install dependencies
+
+Only needed for cloned projects. Run in project root:
+
+```
+docker-compose up --rm composer install
+```
+
+What it does:
+
+1. Downloads dependencies as defined in `composer.json`
+
+## 5. Configure database
 
 Run in project root:
 
@@ -66,7 +78,7 @@ What it does:
 2. Runs `artisan migrate` to set up database.
 3. Stops and removes `artisan` utility container upon completion.
 
-## 5. Visit application
+## 6. Visit application
 
 Go to http://127.0.0.1:8000/ to see Laravel application.
 
