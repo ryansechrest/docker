@@ -1,8 +1,8 @@
 # Laravel
 
-## 1. Download Laravel
+## 1a. Create Laravel
 
-Run in project root:
+To start with new project, run in project root:
 
 ```
 docker-compose run --rm composer create-project --prefer-dist laravel/laravel .
@@ -13,6 +13,14 @@ What it does:
 1. Builds and starts `composer` utility container.
 2. Runs `composer create-project` to download Laravel into `laravel` directory.
 3. Stops and removes `composer` utility container upon completion.
+
+## 1b. Clone Laravel
+
+To start with existing project, clone repository into project root:
+
+```
+git clone git@github.com:ryansechrest/docker.git .
+```
 
 ## 2. Configure MySQL settings
 
