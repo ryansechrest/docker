@@ -13,7 +13,7 @@ What it does:
 1. Builds and starts `composer` utility container.
 2. Runs `composer create-project` to download Laravel into `laravel` directory.
    - Copies `.env.example` to `.env`.
-   - Runs `composer install` to install dependenices.
+   - Runs `composer install` to install dependencies.
    - Runs `artisan key:generate` to set `APP_KEY` to random key.
 3. Stops and removes `composer` utility container upon completion.
 
@@ -63,7 +63,7 @@ What it does:
 
 ## 4. Install dependencies
 
-> :warning: Only needed for cloned projects.
+> ⚠️ Only needed for cloned projects.
 
 Run in project root:
 
@@ -77,7 +77,7 @@ What it does:
 
 ## 5. Generate key
 
-> :warning: Only needed for cloned projects.
+> ⚠️ Only needed for cloned projects.
 
 Run in project root:
 
