@@ -23,6 +23,8 @@ services:
 
   mysql:
     image: mysql:5.7
+    # Optional: Force platform if using MacBook with A1 chip (linux/arm64/v8)
+    platform: linux/x86_64
     env_file:
       - ./docker/env/mysql.env
     # Optional: Expose port to connect to database locally
