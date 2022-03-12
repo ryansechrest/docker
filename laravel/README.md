@@ -5,7 +5,7 @@
 To start with new project, run in project root:
 
 ```
-docker-compose run --rm composer create-project --prefer-dist laravel/laravel .
+docker compose run --rm composer create-project --prefer-dist laravel/laravel .
 ```
 
 What it does:
@@ -53,7 +53,7 @@ What it does:
 Run in project root:
 
 ```
-docker-compose up -d --build nginx
+docker compose up -d --build nginx
 ```
 
 What it does:
@@ -68,7 +68,7 @@ What it does:
 Run in project root:
 
 ```
-docker-compose up --rm composer install
+docker compose run --rm composer install
 ```
 
 What it does:
@@ -82,7 +82,7 @@ What it does:
 Run in project root:
 
 ```
-docker-compose up --rm artisan key:generate
+docker compose run --rm artisan key:generate
 ```
 
 What it does:
@@ -94,7 +94,7 @@ What it does:
 Run in project root:
 
 ```
-docker-compose run --rm artisan migrate
+docker compose run --rm artisan migrate
 ```
 
 What it does:
@@ -109,4 +109,4 @@ Go to http://127.0.0.1:6800/ to see Laravel application.
 
 Connect to MySQL using `127:0.0.1:6801` with user `laravel` and password `secret`.
 
-Run `docker-compose down` to stop all containers.
+Run `docker compose down` to stop all containers.
