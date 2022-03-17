@@ -63,7 +63,7 @@ What it does:
 
 > ⚠️ Remove `--build` to speed up the launch if nothing changed.
 
-## 4. Install dependencies
+## 4. Install PHP dependencies
 
 > ⚠️ Only needed for cloned projects.
 
@@ -79,7 +79,7 @@ What it does:
 2. Downloads PHP dependencies defined in `composer.json`.
 3. Stops and removes `composer` utility container upon completion.
 
-## 5. Generate key
+## 5. Generate app key
 
 > ⚠️ Only needed for cloned projects.
 
@@ -109,7 +109,7 @@ What it does:
 2. Runs `artisan migrate` to update database tables.
 3. Stops and removes `artisan` utility container upon completion.
 
-## 7. Install dependencies
+## 7. Install Node dependencies
 
 ```
 docker compose run --rm npm install
