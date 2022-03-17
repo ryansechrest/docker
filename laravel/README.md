@@ -121,7 +121,25 @@ What it does:
 2. Installs Node dependencies defined in `package.json`.
 3. Stops and removes `npm` utility container upon completion.
 
-## 8. Visit application
+## 8. Compile CSS & JS
+
+```
+docker-compose run --rm npx mix
+```
+
+What it does:
+
+1. Builds and starts `npx` utility container.
+2. Compile CSS and JS into `public` directory.
+3. Stops and removes `npx` utility container upon completion.
+
+For active development, append `watch` to compile in real-time.
+
+```
+docker-compose run --rm npx mix watch
+```
+
+## 9. Visit application
 
 Go to http://127.0.0.1:6800/ to see Laravel application.
 
