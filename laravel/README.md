@@ -61,6 +61,8 @@ What it does:
 1. Builds and starts `nginx`, `php`, and `mysql` containers.
 2. Runs in detached mode and rebuilds `nginx` container on each start.
 
+> ⚠️ Remove `--build` to speed up the launch if nothing changed.
+
 ## 4. Install dependencies
 
 > ⚠️ Only needed for cloned projects.
@@ -73,7 +75,9 @@ docker compose run --rm composer install
 
 What it does:
 
-1. Downloads dependencies as defined in `composer.json`
+1. Builds and starts `composer` utility container.
+2. Downloads PHP dependencies defined in `composer.json`.
+3. Stops and removes `composer` utility container upon completion.
 
 ## 5. Generate key
 
@@ -87,7 +91,9 @@ docker compose run --rm artisan key:generate
 
 What it does:
 
-1. Generates `APP_KEY` value in `.env` file
+1. Builds and starts `artisan` utility container.
+2. Generates `APP_KEY` value in `.env` file
+3. Stops and removes `artisan` utility container upon completion.
 
 ## 6. Configure database
 
@@ -100,10 +106,22 @@ docker compose run --rm artisan migrate
 What it does:
 
 1. Builds and starts `artisan` utility container.
-2. Runs `artisan migrate` to set up database.
+2. Runs `artisan migrate` to update database tables.
 3. Stops and removes `artisan` utility container upon completion.
 
-## 7. Visit application
+## 7. Install dependencies
+
+```
+docker compose run --rm npm install
+```
+
+What it does:
+
+1. Builds and starts `npm` utility container.
+2. Installs Node dependencies defined in `package.json`.
+3. Stops and removes `npm` utility container upon completion.
+
+## 8. Visit application
 
 Go to http://127.0.0.1:6800/ to see Laravel application.
 
