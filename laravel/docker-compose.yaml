@@ -55,6 +55,14 @@ services:
       dockerfile: npm.dockerfile
     volumes:
       - ./laravel:/var/www/html
+      
+  npx:
+    build:
+      context: ./docker
+      dockerfile: npm.dockerfile
+    volumes:
+      - ./laravel:/var/www/html
+    entrypoint: ["npx"]
 
 volumes:
   db_data: {}
