@@ -61,7 +61,7 @@ What it does:
 1. Builds and starts `nginx`, `php`, and `mysql` containers.
 2. Runs in detached mode and rebuilds `nginx` container on each start.
 
-> ⚠️ Remove `--build` to speed up the launch if nothing changed.
+> ⚠️ Remove `--build` flag to speed up launch if nothing changed.
 
 ## 4. Install PHP dependencies
 
@@ -92,7 +92,7 @@ docker compose run --rm artisan key:generate
 What it does:
 
 1. Builds and starts `artisan` utility container.
-2. Generates `APP_KEY` value in `.env` file
+2. Generates `APP_KEY` value in `.env` file.
 3. Stops and removes `artisan` utility container upon completion.
 
 ## 6. Configure database
