@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: docker/nginx.dockerfile
     ports:
-      - "6800:80"
+      - "8600:80"
     volumes:
       - ./laravel:/var/www/html
       - ./docker/conf/nginx.conf:/etc/nginx/conf.d/default.conf:ro
@@ -23,11 +23,13 @@ services:
 
   mysql:
     image: mysql:5.7
+    # Optional: Force platform if using MacBook with A1 chip (linux/arm64/v8)
+    platform: linux/x86_64
     env_file:
       - ./docker/env/mysql.env
     # Optional: Expose port to connect to database locally
     ports:
-      - "6801:3306"
+      - "8601:3306"
     volumes:
       - db_data:/var/lib/mysql
 
@@ -53,6 +55,14 @@ services:
       dockerfile: npm.dockerfile
     volumes:
       - ./laravel:/var/www/html
+      
+  npx:
+    build:
+      context: ./docker
+      dockerfile: npm.dockerfile
+    volumes:
+      - ./laravel:/var/www/html
+    entrypoint: ["npx"]
 
 volumes:
   db_data: {}
