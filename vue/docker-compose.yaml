@@ -1,0 +1,19 @@
+services:
+
+  # Primary Containers
+  node:
+    build:
+      context: .
+      dockerfile: ./docker/node.dockerfile
+    volumes:
+      - ./vue:/app
+    ports:
+      - '6802:3000'
+
+  # Utility Containers
+  npm:
+    build:
+      context: .
+      dockerfile: ./docker/npm.dockerfile
+    volumes:
+      - ./vue:/app
