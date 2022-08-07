@@ -52,6 +52,6 @@ What it does:
 
 ## 4. Visit application
 
-Go to http://127.0.0.1:6802/ to see Vue application.
+Go to http://127.0.0.1:8602/ to see Vue application.
 
 Run `docker-compose down` to stop container.
