@@ -15,6 +15,12 @@ What it does:
    - Runs `npm install` to install dependencies.
 3. Stops and removes `npm` utility container upon completion.
 
+When prompted for `Project name`, enter a `.` and press ENTER.
+
+This forces the project to be installed in the `vue` directory and not another sub-directory within.
+
+It's important, because Docker has been configured to run the project from the `vue` directory.
+
 ## 1b. Clone Vue
 
 To start with existing project, clone repository into project root:
