@@ -5,7 +5,7 @@
 To start with new project, run in project root:
 
 ```
-docker-compose run --rm npm init vue
+docker compose run --rm npm init vue
 ```
 
 What it does:
@@ -36,7 +36,7 @@ git clone git@github.com:<username>/<repository>.git .
 Run in project root:
 
 ```
-docker-compose up --rm npm install
+docker compose up --rm npm install
 ```
 
 What it does:
@@ -48,7 +48,7 @@ What it does:
 Run in project root:
 
 ```
-docker-compose up -d --build node
+docker compose up -d --build node
 ```
 
 What it does:
@@ -60,4 +60,4 @@ What it does:
 
 Go to http://127.0.0.1:8602/ to see Vue application.
 
-Run `docker-compose down` to stop container.
+Run `docker compose down` to stop container.
