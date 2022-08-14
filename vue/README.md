@@ -12,6 +12,7 @@ What it does:
 
 1. Builds and starts `npm` utility container.
 2. Runs `npm init vue` to download Vue into `vue` directory.
+   - Runs `npm install` to install dependencies. 
 3. Stops and removes `npm` utility container upon completion.
 
 When prompted for `Project name`, enter a `.` and press ENTER.
@@ -29,6 +30,8 @@ git clone git@github.com:<username>/<repository>.git .
 ```
 
 ## 2. Install dependencies
+
+> ⚠️ Only needed for cloned projects.
 
 Run in project root:
 
