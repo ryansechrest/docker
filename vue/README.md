@@ -12,7 +12,6 @@ What it does:
 
 1. Builds and starts `npm` utility container.
 2. Runs `npm init vue` to download Vue into `vue` directory.
-   - Runs `npm install` to install dependencies. 
 3. Stops and removes `npm` utility container upon completion.
 
 When prompted for `Project name`, enter a `.` and press ENTER.
@@ -29,9 +28,23 @@ To start with existing project, clone repository into project root:
 git clone git@github.com:<username>/<repository>.git .
 ```
 
-## 2. Install dependencies
+## 2. Configure Vite
 
-> ⚠️ Only needed for cloned projects.
+Include `--host` flag in `dev` script located in `package.json`:
+
+```
+"scripts": {
+   "dev": "vite --host",
+   "build": "vite build",
+   "preview": "vite preview --port 4173"
+},
+```
+
+What it does:
+
+1. Configures Vite to listen on all IP addresses.
+
+## 3. Install dependencies
 
 Run in project root:
 
@@ -41,9 +54,9 @@ docker compose up --rm npm install
 
 What it does:
 
-1. Downloads dependencies as defined in `package.json`
+1. Downloads dependencies as defined in `package.json`.
 
-## 3. Start containers
+## 4. Start containers
 
 Run in project root:
 
@@ -56,7 +69,7 @@ What it does:
 1. Builds and starts `node` container.
 2. Runs in detached mode and rebuilds `node` container on each start.
 
-## 4. Visit application
+## 5. Visit application
 
 Go to http://127.0.0.1:8602/ to see Vue application.
 
