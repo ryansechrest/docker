@@ -124,7 +124,7 @@ What it does:
 ## 8. Compile CSS & JS
 
 ```
-docker-compose run --rm npx mix
+docker compose run --rm npx mix
 ```
 
 What it does:
@@ -136,7 +136,7 @@ What it does:
 For active development, append `watch` to compile in real-time.
 
 ```
-docker-compose run --rm npx mix watch
+docker compose run --rm npx mix watch
 ```
 
 ## 9. Visit application
