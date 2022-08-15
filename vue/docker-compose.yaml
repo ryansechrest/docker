@@ -4,7 +4,7 @@ services:
   node:
     build:
       context: .
-      dockerfile: ./docker/node.dockerfile
+      dockerfile: docker/node.dockerfile
     volumes:
       - ./vue:/app
     ports:
@@ -14,6 +14,6 @@ services:
   npm:
     build:
       context: .
-      dockerfile: ./docker/npm.dockerfile
+      dockerfile: docker/npm.dockerfile
     volumes:
       - ./vue:/app
