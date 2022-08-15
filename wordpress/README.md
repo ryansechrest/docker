@@ -41,7 +41,7 @@ What it does:
 
 ## 3. Visit application
 
-Go to http://127.0.0.1:6803/ to see WordPress application.
+Go to http://127.0.0.1:8603/ to see WordPress application.
 
 Connect to MySQL using `127:0.0.1:8604` with user `wordpress` and password `secret`.
 
