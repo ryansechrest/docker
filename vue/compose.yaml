@@ -5,10 +5,10 @@ services:
     build:
       context: .
       dockerfile: docker/node.dockerfile
+    ports:
+      - "8602:3000"
     volumes:
       - ./vue:/app
-    ports:
-      - '8602:3000'
 
   # Utility Containers
   npm:
