@@ -41,8 +41,8 @@ What it does:
 
 ## 3. Visit application
 
-Go to http://127.0.0.1:6800/ to see Laravel application.
+Go to http://127.0.0.1:6803/ to see WordPress application.
 
-Connect to MySQL using `127:0.0.1:8603` with user `wordpress` and password `secret`.
+Connect to MySQL using `127:0.0.1:8604` with user `wordpress` and password `secret`.
 
 Run `docker compose down` to stop all containers.
